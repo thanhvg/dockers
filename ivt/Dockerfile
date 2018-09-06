@@ -21,13 +21,14 @@ RUN pip3 install flask
 RUN apt-get -yqq install python3-numpy python3-dns
 
 RUN pip3 install eventlet
+RUN pip3 install requests
 RUN pip3 install psycopg2
 RUN pip3 install pillow
 RUN pip3 install dnspython
 
 #Install tensorflow package
 
-RUN pip3 install tensorflow
+RUN pip3 install tensorflow==1.10
 
 RUN pip3 install pyinstaller
 
