@@ -1,8 +1,14 @@
 # start from base
 FROM ubuntu:16.04
 
-# install system-wide deps for python and node
+RUN apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8
+RUN echo "deb http://apt.postgresql.org/pub/repos/apt/ precise-pgdg main" > /etc/apt/sources.list.d/pgdg.list
+
 RUN apt-get -yqq update
+
+RUN apt-get install -y python-software-properties software-properties-common postgresql-9.6 postgresql-contrib-9.6 libpq-dev
+
+# install system-wide deps for python and node
 # RUN apt-get -yqq install apt-utils
 # RUN apt-get update && apt-get install -y --no-install-recommends apt-utils
 # python
