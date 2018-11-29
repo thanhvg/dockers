@@ -28,7 +28,7 @@ RUN apt-get -yqq install python3-numpy python3-dns
 
 RUN pip3 install eventlet
 RUN pip3 install requests
-RUN pip3 install psycopg2
+RUN pip3 install psycopg2-binary
 RUN pip3 install pillow
 RUN pip3 install dnspython
 
@@ -36,5 +36,5 @@ RUN pip3 install dnspython
 
 RUN pip3 install tensorflow==1.10
 
-RUN pip3 install pyinstaller
+RUN pip3 install pyinstaller==3.3.1
 
